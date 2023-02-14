@@ -1,14 +1,14 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  generateName: nodejs-pipelinerun-
+  generateName: spaceinvader-pipelinerun-
 spec:
   serviceAccountName: docker-login
   pipelineRef:
-    name: nodejs-pipeline
+    name: spaceinvader-pipeline
   params:
     - name: IMAGE
-      value: docker.io/cloudacademydevops/nodejs-app
+      value: docker.io/cloudacademydevops/spaceinvader
     - name: TAG
       value: latest
   workspaces:
