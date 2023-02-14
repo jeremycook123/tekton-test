@@ -1,13 +1,13 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: nodejs-pipeline
+  name: spaceinvader-pipeline
 spec:
   params:
     - name: IMAGE
       description: Image description
       type: string
-      default: "docker.io/cloudacademydevops/nodejs-app"
+      default: "docker.io/cloudacademydevops/spaceinvader"
     - name: TAG
       description: Preferred tag
       default: latest
