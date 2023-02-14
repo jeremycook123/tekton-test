@@ -7,7 +7,7 @@ spec:
     - name: IMAGE
       description: Image description
       type: string
-      default: "docker.io/joeshiett/nodejs-app"
+      default: "docker.io/cloudacademydevops/nodejs-app"
     - name: TAG
       description: Preferred tag
       default: latest
@@ -22,7 +22,7 @@ spec:
           workspace: linked-workspace
       params:
         - name: url
-          value: https://github.com/joeshiett/tekton-test
+          value: https://github.com/jeremycook123/tekton-test
         - name: subdirectory
           value: ""
         - name: deleteExisting
