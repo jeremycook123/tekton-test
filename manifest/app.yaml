@@ -32,15 +32,17 @@ spec:
   selector:
     app: nodejs-app
 ---
-apiVersion: route.openshift.io/v1
 kind: Route
+apiVersion: route.openshift.io/v1
 metadata:
-  name: nodejs-service
+  name: nodejs
   labels:
     env: demo
 spec:
   to:
     kind: Service
     name: nodejs-service
+    weight: 100
   port:
-    targetPort: 80
+    targetPort: 8081
+  wildcardPolicy: None
